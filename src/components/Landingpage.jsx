@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import profileImg from "../assets/me.png";
-import Navbar from "./Navbar"; // Navbar importieren
-import Footer from "./Footer"; // Footer importieren  
-const typingText = "Martin Koch -  AI Engineer & Webdeveloper";
+import profileImg from "../assets/me.jpg";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+
+const typingText = "Martin Koch - AI Engineer & Webdeveloper";
 
 function Landingpage() {
   const [displayedText, setDisplayedText] = useState("");
@@ -19,19 +20,19 @@ function Landingpage() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-white font-sans shadow-xl border-b border-gray-200 overflow-hidden">
+    <div className="relative w-full min-h-screen bg-white font-sans overflow-hidden border-b border-gray-200">
       {/* Navbar */}
       <Navbar />
 
       {/* Padding oben hinzufügen, damit der Text nicht hinter der Navbar liegt */}
-      <div className="pt-24 relative z-10 p-24 max-w-8xl mx-10 text-left">
-        <h1 className="font-bold text-6xl md:text-9xl mb-3 min-h-[160px] text-black">
+      <div className="pt-24 px-6 sm:px-12 md:px-24 lg:px-32 relative z-10 max-w-7xl mx-auto text-left">
+        <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-3 min-h-[120px] sm:min-h-[140px] md:min-h-[160px] text-black leading-tight">
           <span className="border-r-2 border-blue-600 animate-pulse pr-1">
             {displayedText.split("").map((char, idx) =>
               char === "&" ? (
                 <span
                   key={idx}
-                  className="text-6xl md:text-9xl text-blue-600 font-bold"
+                  className="text-blue-600 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
                 >
                   &amp;
                 </span>
@@ -47,7 +48,7 @@ function Landingpage() {
       <img
         src={profileImg}
         alt="Profilbild"
-        className="absolute bottom-0 right-0 w-full grayscale"
+        className="absolute bottom-0 right-0 w-.9 h-auto object-cover grayscale"
       />
 
       {/* Footer */}
