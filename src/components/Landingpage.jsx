@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import profileImg from "../assets/me.png";
 import Navbar from "./Navbar"; // Navbar importieren
-
+import Footer from "./Footer"; // Footer importieren  
 const typingText = "Martin Koch -  AI Engineer & Webdeveloper";
 
 function Landingpage() {
@@ -47,8 +47,11 @@ function Landingpage() {
       <img
         src={profileImg}
         alt="Profilbild"
-        className="absolute bottom-0 right-20 w-full grayscale"
+        className="absolute bottom-0 right-0 w-full grayscale"
       />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
